@@ -26,6 +26,35 @@
 		74FB81852850FAE200167564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74FB81812850FAE200167564 /* Assets.xcassets */; };
 		74FB81862850FAE200167564 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74FB81822850FAE200167564 /* GoogleService-Info.plist */; };
 		74FB81872850FAE200167564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FB81832850FAE200167564 /* LaunchScreen.storyboard */; };
+		74FB81D52850FB3700167564 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB818E2850FB3600167564 /* RegisterUseCase.swift */; };
+		74FB81D62850FB3700167564 /* RegisterRepoImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81902850FB3600167564 /* RegisterRepoImplementation.swift */; };
+		74FB81D72850FB3700167564 /* RegisterRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81932850FB3600167564 /* RegisterRepo.swift */; };
+		74FB81D82850FB3700167564 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81962850FB3600167564 /* RegisterViewModel.swift */; };
+		74FB81D92850FB3700167564 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81982850FB3600167564 /* RegisterCoordinator.swift */; };
+		74FB81DA2850FB3800167564 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB819A2850FB3600167564 /* RegisterVC.swift */; };
+		74FB81DB2850FB3800167564 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FB819B2850FB3600167564 /* RegisterVC.xib */; };
+		74FB81DC2850FB3800167564 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81A02850FB3600167564 /* LoginUseCase.swift */; };
+		74FB81DD2850FB3800167564 /* LoginRepoImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81A22850FB3600167564 /* LoginRepoImplementation.swift */; };
+		74FB81DE2850FB3800167564 /* LoginRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81A52850FB3600167564 /* LoginRepo.swift */; };
+		74FB81DF2850FB3800167564 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81A82850FB3600167564 /* LoginViewModel.swift */; };
+		74FB81E02850FB3800167564 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81AA2850FB3600167564 /* LoginCoordinator.swift */; };
+		74FB81E12850FB3800167564 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81AC2850FB3600167564 /* LoginVC.swift */; };
+		74FB81E22850FB3800167564 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FB81AD2850FB3600167564 /* LoginVC.xib */; };
+		74FB81E32850FB3800167564 /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81B12850FB3600167564 /* DocumentViewModel.swift */; };
+		74FB81E42850FB3800167564 /* DocumentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81B32850FB3600167564 /* DocumentCoordinator.swift */; };
+		74FB81E52850FB3800167564 /* DocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FB81B52850FB3600167564 /* DocumentViewController.xib */; };
+		74FB81E62850FB3800167564 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81B62850FB3600167564 /* DocumentViewController.swift */; };
+		74FB81E72850FB3800167564 /* DocumentRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81B92850FB3600167564 /* DocumentRepo.swift */; };
+		74FB81E82850FB3800167564 /* DocumentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81BD2850FB3600167564 /* DocumentUseCase.swift */; };
+		74FB81E92850FB3800167564 /* DocumentRepoImplementaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81BF2850FB3600167564 /* DocumentRepoImplementaion.swift */; };
+		74FB81EA2850FB3800167564 /* SettingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81C42850FB3600167564 /* SettingsUseCase.swift */; };
+		74FB81EB2850FB3800167564 /* SettingsRepoImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81C62850FB3600167564 /* SettingsRepoImplementation.swift */; };
+		74FB81EC2850FB3800167564 /* SettingsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81C92850FB3600167564 /* SettingsRepo.swift */; };
+		74FB81ED2850FB3800167564 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81CD2850FB3600167564 /* SettingCoordinator.swift */; };
+		74FB81EE2850FB3800167564 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FB81CF2850FB3600167564 /* SettingsViewController.xib */; };
+		74FB81EF2850FB3800167564 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81D02850FB3600167564 /* SettingsViewController.swift */; };
+		74FB81F02850FB3800167564 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81D32850FB3600167564 /* BaseTabBarController.swift */; };
+		74FB81F12850FB3800167564 /* BaseTabBarCoordinstor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81D42850FB3600167564 /* BaseTabBarCoordinstor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +73,35 @@
 		74FB81812850FAE200167564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74FB81822850FAE200167564 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74FB81842850FAE200167564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74FB818E2850FB3600167564 /* RegisterUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		74FB81902850FB3600167564 /* RegisterRepoImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRepoImplementation.swift; sourceTree = "<group>"; };
+		74FB81932850FB3600167564 /* RegisterRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRepo.swift; sourceTree = "<group>"; };
+		74FB81962850FB3600167564 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		74FB81982850FB3600167564 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		74FB819A2850FB3600167564 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		74FB819B2850FB3600167564 /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		74FB81A02850FB3600167564 /* LoginUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		74FB81A22850FB3600167564 /* LoginRepoImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRepoImplementation.swift; sourceTree = "<group>"; };
+		74FB81A52850FB3600167564 /* LoginRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRepo.swift; sourceTree = "<group>"; };
+		74FB81A82850FB3600167564 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		74FB81AA2850FB3600167564 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		74FB81AC2850FB3600167564 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		74FB81AD2850FB3600167564 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		74FB81B12850FB3600167564 /* DocumentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
+		74FB81B32850FB3600167564 /* DocumentCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentCoordinator.swift; sourceTree = "<group>"; };
+		74FB81B52850FB3600167564 /* DocumentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentViewController.xib; sourceTree = "<group>"; };
+		74FB81B62850FB3600167564 /* DocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
+		74FB81B92850FB3600167564 /* DocumentRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentRepo.swift; sourceTree = "<group>"; };
+		74FB81BD2850FB3600167564 /* DocumentUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentUseCase.swift; sourceTree = "<group>"; };
+		74FB81BF2850FB3600167564 /* DocumentRepoImplementaion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentRepoImplementaion.swift; sourceTree = "<group>"; };
+		74FB81C42850FB3600167564 /* SettingsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsUseCase.swift; sourceTree = "<group>"; };
+		74FB81C62850FB3600167564 /* SettingsRepoImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepoImplementation.swift; sourceTree = "<group>"; };
+		74FB81C92850FB3600167564 /* SettingsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepo.swift; sourceTree = "<group>"; };
+		74FB81CD2850FB3600167564 /* SettingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		74FB81CF2850FB3600167564 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		74FB81D02850FB3600167564 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		74FB81D32850FB3600167564 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		74FB81D42850FB3600167564 /* BaseTabBarCoordinstor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarCoordinstor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +143,7 @@
 				74FB816A2850FADD00167564 /* Coordinator */,
 				74FB816C2850FADD00167564 /* Core */,
 				74FB81702850FADD00167564 /* Extension */,
+				74FB81882850FB3600167564 /* Scenes */,
 				74FB81672850FADC00167564 /* FirebaseManager */,
 				74FB81802850FAE200167564 /* Resources */,
 				74FB81522850F6EF00167564 /* Info.plist */,
@@ -146,6 +205,418 @@
 				74FB81832850FAE200167564 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		74FB81882850FB3600167564 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81892850FB3600167564 /* Auth */,
+				74FB81AE2850FB3600167564 /* Document */,
+				74FB81C02850FB3600167564 /* Setting */,
+				74FB81D12850FB3600167564 /* Base */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		74FB81892850FB3600167564 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				74FB818A2850FB3600167564 /* Register */,
+				74FB819C2850FB3600167564 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		74FB818A2850FB3600167564 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				74FB818B2850FB3600167564 /* Data */,
+				74FB81912850FB3600167564 /* Domain */,
+				74FB81942850FB3600167564 /* Presentation */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		74FB818B2850FB3600167564 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				74FB818C2850FB3600167564 /* Model */,
+				74FB818D2850FB3600167564 /* UseCase */,
+				74FB818F2850FB3600167564 /* repo */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		74FB818C2850FB3600167564 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74FB818D2850FB3600167564 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				74FB818E2850FB3600167564 /* RegisterUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		74FB818F2850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81902850FB3600167564 /* RegisterRepoImplementation.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81912850FB3600167564 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81922850FB3600167564 /* repo */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		74FB81922850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81932850FB3600167564 /* RegisterRepo.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81942850FB3600167564 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81952850FB3600167564 /* ViewModel */,
+				74FB81972850FB3600167564 /* Coordinator */,
+				74FB81992850FB3600167564 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		74FB81952850FB3600167564 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81962850FB3600167564 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74FB81972850FB3600167564 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81982850FB3600167564 /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		74FB81992850FB3600167564 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74FB819A2850FB3600167564 /* RegisterVC.swift */,
+				74FB819B2850FB3600167564 /* RegisterVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74FB819C2850FB3600167564 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				74FB819D2850FB3600167564 /* Data */,
+				74FB81A32850FB3600167564 /* Domain */,
+				74FB81A62850FB3600167564 /* Presentation */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		74FB819D2850FB3600167564 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				74FB819E2850FB3600167564 /* Model */,
+				74FB819F2850FB3600167564 /* UseCase */,
+				74FB81A12850FB3600167564 /* repo */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		74FB819E2850FB3600167564 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74FB819F2850FB3600167564 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81A02850FB3600167564 /* LoginUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		74FB81A12850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81A22850FB3600167564 /* LoginRepoImplementation.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81A32850FB3600167564 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81A42850FB3600167564 /* repo */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		74FB81A42850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81A52850FB3600167564 /* LoginRepo.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81A62850FB3600167564 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81A72850FB3600167564 /* ViewModel */,
+				74FB81A92850FB3600167564 /* Coordinator */,
+				74FB81AB2850FB3600167564 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		74FB81A72850FB3600167564 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81A82850FB3600167564 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74FB81A92850FB3600167564 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81AA2850FB3600167564 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		74FB81AB2850FB3600167564 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81AC2850FB3600167564 /* LoginVC.swift */,
+				74FB81AD2850FB3600167564 /* LoginVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74FB81AE2850FB3600167564 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81AF2850FB3600167564 /* Presentaion  */,
+				74FB81B72850FB3600167564 /* Domain  */,
+				74FB81BA2850FB3600167564 /* Data */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		74FB81AF2850FB3600167564 /* Presentaion  */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81B02850FB3600167564 /* ViewModel */,
+				74FB81B22850FB3600167564 /* Coordinator */,
+				74FB81B42850FB3600167564 /* View */,
+			);
+			path = "Presentaion ";
+			sourceTree = "<group>";
+		};
+		74FB81B02850FB3600167564 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81B12850FB3600167564 /* DocumentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74FB81B22850FB3600167564 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81B32850FB3600167564 /* DocumentCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		74FB81B42850FB3600167564 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81B52850FB3600167564 /* DocumentViewController.xib */,
+				74FB81B62850FB3600167564 /* DocumentViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74FB81B72850FB3600167564 /* Domain  */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81B82850FB3600167564 /* repo */,
+			);
+			path = "Domain ";
+			sourceTree = "<group>";
+		};
+		74FB81B82850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81B92850FB3600167564 /* DocumentRepo.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81BA2850FB3600167564 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81BB2850FB3600167564 /* Model */,
+				74FB81BC2850FB3600167564 /* UseCase */,
+				74FB81BE2850FB3600167564 /* repo */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		74FB81BB2850FB3600167564 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74FB81BC2850FB3600167564 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81BD2850FB3600167564 /* DocumentUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		74FB81BE2850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81BF2850FB3600167564 /* DocumentRepoImplementaion.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81C02850FB3600167564 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81C12850FB3600167564 /* Data */,
+				74FB81C72850FB3600167564 /* Domain */,
+				74FB81CA2850FB3600167564 /* Presentation */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		74FB81C12850FB3600167564 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81C22850FB3600167564 /* Model */,
+				74FB81C32850FB3600167564 /* UseCase */,
+				74FB81C52850FB3600167564 /* repo */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		74FB81C22850FB3600167564 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74FB81C32850FB3600167564 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81C42850FB3600167564 /* SettingsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		74FB81C52850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81C62850FB3600167564 /* SettingsRepoImplementation.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81C72850FB3600167564 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81C82850FB3600167564 /* repo */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		74FB81C82850FB3600167564 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81C92850FB3600167564 /* SettingsRepo.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74FB81CA2850FB3600167564 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81CB2850FB3600167564 /* ViewModel */,
+				74FB81CC2850FB3600167564 /* Coordinator */,
+				74FB81CE2850FB3600167564 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		74FB81CB2850FB3600167564 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74FB81CC2850FB3600167564 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81CD2850FB3600167564 /* SettingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		74FB81CE2850FB3600167564 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81CF2850FB3600167564 /* SettingsViewController.xib */,
+				74FB81D02850FB3600167564 /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74FB81D12850FB3600167564 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81D22850FB3600167564 /* BaseTabBar */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		74FB81D22850FB3600167564 /* BaseTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				74FB81D32850FB3600167564 /* BaseTabBarController.swift */,
+				74FB81D42850FB3600167564 /* BaseTabBarCoordinstor.swift */,
+			);
+			path = BaseTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +690,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FB81E22850FB3800167564 /* LoginVC.xib in Resources */,
 				74FB81872850FAE200167564 /* LaunchScreen.storyboard in Resources */,
+				74FB81DB2850FB3800167564 /* RegisterVC.xib in Resources */,
 				74FB81852850FAE200167564 /* Assets.xcassets in Resources */,
 				74FB81862850FAE200167564 /* GoogleService-Info.plist in Resources */,
+				74FB81EE2850FB3800167564 /* SettingsViewController.xib in Resources */,
+				74FB81E52850FB3800167564 /* DocumentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,16 +707,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FB81E12850FB3800167564 /* LoginVC.swift in Sources */,
+				74FB81D72850FB3700167564 /* RegisterRepo.swift in Sources */,
+				74FB81EF2850FB3800167564 /* SettingsViewController.swift in Sources */,
+				74FB81DD2850FB3800167564 /* LoginRepoImplementation.swift in Sources */,
+				74FB81D62850FB3700167564 /* RegisterRepoImplementation.swift in Sources */,
+				74FB81F12850FB3800167564 /* BaseTabBarCoordinstor.swift in Sources */,
+				74FB81EC2850FB3800167564 /* SettingsRepo.swift in Sources */,
+				74FB81DC2850FB3800167564 /* LoginUseCase.swift in Sources */,
+				74FB81E82850FB3800167564 /* DocumentUseCase.swift in Sources */,
+				74FB81EB2850FB3800167564 /* SettingsRepoImplementation.swift in Sources */,
+				74FB81E32850FB3800167564 /* DocumentViewModel.swift in Sources */,
 				74FB81792850FADD00167564 /* AppCoordinator.swift in Sources */,
+				74FB81E42850FB3800167564 /* DocumentCoordinator.swift in Sources */,
 				74FB81762850FADD00167564 /* FirebaseAuthImplementation.swift in Sources */,
+				74FB81EA2850FB3800167564 /* SettingsUseCase.swift in Sources */,
+				74FB81F02850FB3800167564 /* BaseTabBarController.swift in Sources */,
 				74FB817E2850FADD00167564 /* TextField+EXT.swift in Sources */,
+				74FB81E62850FB3800167564 /* DocumentViewController.swift in Sources */,
+				74FB81DE2850FB3800167564 /* LoginRepo.swift in Sources */,
+				74FB81DF2850FB3800167564 /* LoginViewModel.swift in Sources */,
+				74FB81E02850FB3800167564 /* LoginCoordinator.swift in Sources */,
+				74FB81E72850FB3800167564 /* DocumentRepo.swift in Sources */,
 				74FB817C2850FADD00167564 /* UIButton+Ext.swift in Sources */,
 				74FB81772850FADD00167564 /* FirebaseRealTimeImplementation.swift in Sources */,
+				74FB81ED2850FB3800167564 /* SettingCoordinator.swift in Sources */,
 				74FB817A2850FADD00167564 /* AppDelegate.swift in Sources */,
 				74FB817D2850FADD00167564 /* UIColor+EXT.swift in Sources */,
+				74FB81DA2850FB3800167564 /* RegisterVC.swift in Sources */,
+				74FB81E92850FB3800167564 /* DocumentRepoImplementaion.swift in Sources */,
+				74FB81D82850FB3700167564 /* RegisterViewModel.swift in Sources */,
 				74FB81782850FADD00167564 /* Coordinator.swift in Sources */,
+				74FB81D52850FB3700167564 /* RegisterUseCase.swift in Sources */,
 				74FB817F2850FADD00167564 /* UIView+EXT.swift in Sources */,
 				74FB817B2850FADD00167564 /* SceneDelegate.swift in Sources */,
+				74FB81D92850FB3700167564 /* RegisterCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
