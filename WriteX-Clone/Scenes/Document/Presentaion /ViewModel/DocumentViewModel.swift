@@ -17,25 +17,36 @@ class DocumentViewModel {
     private var coordinator: DocumentCoordinator?
     
     
-    let notes: PublishSubject<[Note]> = PublishSubject()
+    let notesPublisher: PublishRelay<[Note]> = PublishRelay()
+    let searchBarText: BehaviorRelay<String> = BehaviorRelay(value: "")
+
+    
+    
     var dataSource = RxCollectionViewSectionedReloadDataSource<SectionDataSources<Note>> { _, _, _, _ in
         fatalError()
     }
+    
+    let useCase: DocumentUseCase = DocumentUseCase()
     
     init(coordinator: DocumentCoordinator = DocumentCoordinator()){
         self.coordinator = coordinator
     }
     
     
+    
     func noteDemoData(){
         let notes: [Note] = [.init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
+                             .init(title: "ahme ", discription: "Nre kjl ", date: "",isHidden: false),
                              .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
-                             .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
-                             .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
+                             .init(title: "asfd ", discription: "Nre kjl ", date: "",isHidden: false),
                              .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false)
         ]
-        self.notes.onNext(notes)
+        self.notesPublisher.accept(notes)
+
     }
-    
+        
+    func returnNotesAfterInAllCaseOFFillters() -> Observable<[Note]>{
+        return useCase.returnNotesAfterInAllCaseOFFillters(notesPublisher , search: searchBarText)
+    }
 }
 

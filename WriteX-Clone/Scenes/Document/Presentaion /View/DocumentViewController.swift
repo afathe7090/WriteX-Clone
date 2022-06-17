@@ -11,9 +11,6 @@ import RxCocoa
 import Firebase
 import RxDataSources
 
-enum Section {
-    case main
-}
 
 class DocumentViewController: UIViewController {
     
@@ -39,15 +36,25 @@ class DocumentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Ui Configuration
         setNavigatonBar()
-        configureCollectionViewCells()
-        configureCollectionViewDataSource()
+        setUpSearchController()
+        configureLayOutCollectionView()
+        configureOfNibFilesTOCollectionView()
+        
+        
+        // Binding
+        bindingWithSearchBarText()
+        bindingWithSearchBarText()
+        
+        // DataSource COllection View
         configureDataSourceDataFromNotes()
+        configureCollectionViewDataSource()
         
         
-        
+        // Fetch Data
         loadDataOFNotes()
-
+        
     }
     
     
@@ -60,25 +67,53 @@ class DocumentViewController: UIViewController {
     
     //MARK: - Helper function
     
-    
+    //MARK: - UI handeler
     fileprivate func setNavigatonBar(){
         navigationController?.navigationBar.isHidden = false
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    fileprivate func configureCollectionViewCells(){
-        
-        collectionView.setCollectionViewLayout(.defaultLayout(), animated: true)
-        collectionView.register(UINib(nibName: AddCell.cellID, bundle: nil), forCellWithReuseIdentifier: AddCell.cellID)
-        collectionView.register(UINib(nibName: NotesCell.cellID, bundle: nil), forCellWithReuseIdentifier: NotesCell.cellID)
+    
+    
+    fileprivate func setUpSearchController(){
+        navigationItem.searchController                       = searchController
+        searchController.searchBar.placeholder                = "Search Note"
+        searchController.searchBar.autocapitalizationType     = .none
+        searchController.obscuresBackgroundDuringPresentation = false
     }
     
     
+    
+    fileprivate func configureLayOutCollectionView(){
+        collectionView.setCollectionViewLayout(.defaultLayout(), animated: true)
+    }
+    
+    
+    fileprivate func configureOfNibFilesTOCollectionView(){
+        let identifierCells: [String] = [AddCell.cellID , NotesCell.cellID]
+        collectionView.configureNibWithIdentifier(identifier: identifierCells)
+        
+    }
+    
+    
+    //MARK: - Binding
+    
+    
+    
+    fileprivate func bindingWithSearchBarText(){
+        searchController.searchBar.rx.text.orEmpty
+            .bind(to: viewModel.searchBarText).disposed(by: bag)
+    }
+    
+    
+    
+    
+    
+    //MARK: - DataSource of collectionView
     fileprivate func configureCollectionViewDataSource(){
-
         viewModel.dataSource.configureCell = {(dataSource , collectionView, indexPath , note ) -> UICollectionViewCell in
-            if (indexPath.row == 0) {
+            if (indexPath.row == 0 && self.viewModel.searchBarText.value.isEmpty) {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddCell.cellID,
                                                               for: indexPath) as! AddCell
                 return cell
@@ -86,7 +121,6 @@ class DocumentViewController: UIViewController {
             }else {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NotesCell.cellID,
                                                               for: indexPath) as! NotesCell
-                
                 cell.configureCellData(note: note)
                 return cell
             }
@@ -95,23 +129,18 @@ class DocumentViewController: UIViewController {
     
     
     fileprivate func configureDataSourceDataFromNotes(){
+        loadDataOFNotes()
         
-        viewModel.notes.asObserver()
+        viewModel.returnNotesAfterInAllCaseOFFillters()
             .map({[SectionDataSources(header: "", items: $0)]})
-            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource)).disposed(by: bag)
-        
+            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
+            .disposed(by: bag)
     }
     
-    
+    //MARK: -  Fetch Data oF Notes
     fileprivate func loadDataOFNotes(){
         viewModel.noteDemoData()
     }
     
-    
-    
-    
-    
-   
-    
-    
 }
+

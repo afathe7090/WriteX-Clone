@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		740298A0285CF7420025AD47 /* DataSourceHandelar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402989F285CF7420025AD47 /* DataSourceHandelar.swift */; };
+		740298A2285D02AB0025AD47 /* UICollectionView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740298A1285D02AB0025AD47 /* UICollectionView+EXT.swift */; };
 		740D9F3F2857686B003FB7F7 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 740D9F3E2857686B003FB7F7 /* RxDataSources */; };
 		743CA7B92856B2B6008096DC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7B82856B2B6008096DC /* Note.swift */; };
 		743CA7BF2856B2DD008096DC /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7BB2856B2DD008096DC /* AddCell.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		7402989F285CF7420025AD47 /* DataSourceHandelar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceHandelar.swift; sourceTree = "<group>"; };
+		740298A1285D02AB0025AD47 /* UICollectionView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EXT.swift"; sourceTree = "<group>"; };
 		743CA7B82856B2B6008096DC /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		743CA7BB2856B2DD008096DC /* AddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
 		743CA7BC2856B2DD008096DC /* AddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCell.xib; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				74FB81732850FADD00167564 /* UIColor+EXT.swift */,
 				74FB81742850FADD00167564 /* TextField+EXT.swift */,
 				74FB81752850FADD00167564 /* UIView+EXT.swift */,
+				740298A1285D02AB0025AD47 /* UICollectionView+EXT.swift */,
 			);
 			path = "UI+EXT";
 			sourceTree = "<group>";
@@ -469,9 +472,9 @@
 		74FB81AE2850FB3600167564 /* Document */ = {
 			isa = PBXGroup;
 			children = (
-				74FB81AF2850FB3600167564 /* Presentaion  */,
-				74FB81B72850FB3600167564 /* Domain  */,
 				74FB81BA2850FB3600167564 /* Data */,
+				74FB81B72850FB3600167564 /* Domain  */,
+				74FB81AF2850FB3600167564 /* Presentaion  */,
 			);
 			path = Document;
 			sourceTree = "<group>";
@@ -479,9 +482,9 @@
 		74FB81AF2850FB3600167564 /* Presentaion  */ = {
 			isa = PBXGroup;
 			children = (
+				74FB81B42850FB3600167564 /* View */,
 				74FB81B02850FB3600167564 /* ViewModel */,
 				74FB81B22850FB3600167564 /* Coordinator */,
-				74FB81B42850FB3600167564 /* View */,
 			);
 			path = "Presentaion ";
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				74FB81EF2850FB3800167564 /* SettingsViewController.swift in Sources */,
 				74FB81DD2850FB3800167564 /* LoginRepoImplementation.swift in Sources */,
 				74FB81D62850FB3700167564 /* RegisterRepoImplementation.swift in Sources */,
+				740298A2285D02AB0025AD47 /* UICollectionView+EXT.swift in Sources */,
 				74FB81F12850FB3800167564 /* BaseTabBarCoordinstor.swift in Sources */,
 				74FB81EC2850FB3800167564 /* SettingsRepo.swift in Sources */,
 				74FB81DC2850FB3800167564 /* LoginUseCase.swift in Sources */,

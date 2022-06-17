@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol DocumentRepo  {
-    
+    func returnNotesAfterInAllCaseOFFillters(_ notes: PublishRelay<[Note]> , search: BehaviorRelay<String>) -> Observable<[Note]>
 }
