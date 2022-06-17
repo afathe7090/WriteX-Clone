@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		740298A0285CF7420025AD47 /* DataSourceHandelar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402989F285CF7420025AD47 /* DataSourceHandelar.swift */; };
+		740D9F3F2857686B003FB7F7 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 740D9F3E2857686B003FB7F7 /* RxDataSources */; };
+		743CA7B92856B2B6008096DC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7B82856B2B6008096DC /* Note.swift */; };
+		743CA7BF2856B2DD008096DC /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7BB2856B2DD008096DC /* AddCell.swift */; };
+		743CA7C02856B2DD008096DC /* AddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743CA7BC2856B2DD008096DC /* AddCell.xib */; };
+		743CA7C12856B2DD008096DC /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743CA7BD2856B2DD008096DC /* NotesCell.xib */; };
+		743CA7C22856B2DD008096DC /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7BE2856B2DD008096DC /* NotesCell.swift */; };
+		743CA7C42856B347008096DC /* CustomCollectionViewLayOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */; };
+		743CA7C92856B3D2008096DC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C72856B3D2008096DC /* HelperFunctions.swift */; };
+		743CA7CA2856B3D2008096DC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C82856B3D2008096DC /* Constant.swift */; };
 		74FB815A2850F84100167564 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB81592850F84100167564 /* RxCocoa */; };
 		74FB815C2850F84100167564 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB815B2850F84100167564 /* RxSwift */; };
 		74FB815F2850F85400167564 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB815E2850F85400167564 /* ProgressHUD */; };
@@ -58,6 +68,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7402989F285CF7420025AD47 /* DataSourceHandelar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceHandelar.swift; sourceTree = "<group>"; };
+		743CA7B82856B2B6008096DC /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		743CA7BB2856B2DD008096DC /* AddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
+		743CA7BC2856B2DD008096DC /* AddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCell.xib; sourceTree = "<group>"; };
+		743CA7BD2856B2DD008096DC /* NotesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
+		743CA7BE2856B2DD008096DC /* NotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayOut.swift; sourceTree = "<group>"; };
+		743CA7C72856B3D2008096DC /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		743CA7C82856B3D2008096DC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		74FB81412850F6ED00167564 /* WriteX-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WriteX-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FB81522850F6EF00167564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FB81682850FADC00167564 /* FirebaseAuthImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthImplementation.swift; sourceTree = "<group>"; };
@@ -113,6 +132,7 @@
 				74FB815F2850F85400167564 /* ProgressHUD in Frameworks */,
 				74FB815C2850F84100167564 /* RxSwift in Frameworks */,
 				74FB815A2850F84100167564 /* RxCocoa in Frameworks */,
+				740D9F3F2857686B003FB7F7 /* RxDataSources in Frameworks */,
 				74FB81622850FA6C00167564 /* FirebaseAuth in Frameworks */,
 				74FB81662850FA6C00167564 /* FirebaseStorage in Frameworks */,
 			);
@@ -121,6 +141,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		743CA7BA2856B2DD008096DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				743CA7BB2856B2DD008096DC /* AddCell.swift */,
+				743CA7BC2856B2DD008096DC /* AddCell.xib */,
+				743CA7BD2856B2DD008096DC /* NotesCell.xib */,
+				743CA7BE2856B2DD008096DC /* NotesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		743CA7C52856B34B008096DC /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */,
+			);
+			path = CustomLayout;
+			sourceTree = "<group>";
+		};
+		743CA7C62856B3C2008096DC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				743CA7C82856B3D2008096DC /* Constant.swift */,
+				743CA7C72856B3D2008096DC /* HelperFunctions.swift */,
+				7402989F285CF7420025AD47 /* DataSourceHandelar.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		74FB81382850F6ED00167564 = {
 			isa = PBXGroup;
 			children = (
@@ -140,11 +189,13 @@
 		74FB81432850F6ED00167564 /* WriteX-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				74FB816A2850FADD00167564 /* Coordinator */,
+				743CA7C62856B3C2008096DC /* Helper */,
+				743CA7C52856B34B008096DC /* CustomLayout */,
 				74FB816C2850FADD00167564 /* Core */,
+				74FB816A2850FADD00167564 /* Coordinator */,
+				74FB81672850FADC00167564 /* FirebaseManager */,
 				74FB81702850FADD00167564 /* Extension */,
 				74FB81882850FB3600167564 /* Scenes */,
-				74FB81672850FADC00167564 /* FirebaseManager */,
 				74FB81802850FAE200167564 /* Resources */,
 				74FB81522850F6EF00167564 /* Info.plist */,
 			);
@@ -454,6 +505,7 @@
 		74FB81B42850FB3600167564 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				743CA7BA2856B2DD008096DC /* Cells */,
 				74FB81B52850FB3600167564 /* DocumentViewController.xib */,
 				74FB81B62850FB3600167564 /* DocumentViewController.swift */,
 			);
@@ -489,6 +541,7 @@
 		74FB81BB2850FB3600167564 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				743CA7B82856B2B6008096DC /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -642,6 +695,7 @@
 				74FB81612850FA6C00167564 /* FirebaseAuth */,
 				74FB81632850FA6C00167564 /* FirebaseDatabase */,
 				74FB81652850FA6C00167564 /* FirebaseStorage */,
+				740D9F3E2857686B003FB7F7 /* RxDataSources */,
 			);
 			productName = "WriteX-Clone";
 			productReference = 74FB81412850F6ED00167564 /* WriteX-Clone.app */;
@@ -675,6 +729,7 @@
 				74FB81582850F84100167564 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				74FB815D2850F85400167564 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				74FB81602850FA6C00167564 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = 74FB81422850F6ED00167564 /* Products */;
 			projectDirPath = "";
@@ -695,8 +750,10 @@
 				74FB81DB2850FB3800167564 /* RegisterVC.xib in Resources */,
 				74FB81852850FAE200167564 /* Assets.xcassets in Resources */,
 				74FB81862850FAE200167564 /* GoogleService-Info.plist in Resources */,
+				743CA7C02856B2DD008096DC /* AddCell.xib in Resources */,
 				74FB81EE2850FB3800167564 /* SettingsViewController.xib in Resources */,
 				74FB81E52850FB3800167564 /* DocumentViewController.xib in Resources */,
+				743CA7C12856B2DD008096DC /* NotesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,20 +781,27 @@
 				74FB81EA2850FB3800167564 /* SettingsUseCase.swift in Sources */,
 				74FB81F02850FB3800167564 /* BaseTabBarController.swift in Sources */,
 				74FB817E2850FADD00167564 /* TextField+EXT.swift in Sources */,
+				743CA7C22856B2DD008096DC /* NotesCell.swift in Sources */,
 				74FB81E62850FB3800167564 /* DocumentViewController.swift in Sources */,
 				74FB81DE2850FB3800167564 /* LoginRepo.swift in Sources */,
 				74FB81DF2850FB3800167564 /* LoginViewModel.swift in Sources */,
 				74FB81E02850FB3800167564 /* LoginCoordinator.swift in Sources */,
 				74FB81E72850FB3800167564 /* DocumentRepo.swift in Sources */,
 				74FB817C2850FADD00167564 /* UIButton+Ext.swift in Sources */,
+				743CA7B92856B2B6008096DC /* Note.swift in Sources */,
+				743CA7C92856B3D2008096DC /* HelperFunctions.swift in Sources */,
 				74FB81772850FADD00167564 /* FirebaseRealTimeImplementation.swift in Sources */,
 				74FB81ED2850FB3800167564 /* SettingCoordinator.swift in Sources */,
 				74FB817A2850FADD00167564 /* AppDelegate.swift in Sources */,
+				740298A0285CF7420025AD47 /* DataSourceHandelar.swift in Sources */,
 				74FB817D2850FADD00167564 /* UIColor+EXT.swift in Sources */,
 				74FB81DA2850FB3800167564 /* RegisterVC.swift in Sources */,
+				743CA7CA2856B3D2008096DC /* Constant.swift in Sources */,
+				743CA7BF2856B2DD008096DC /* AddCell.swift in Sources */,
 				74FB81E92850FB3800167564 /* DocumentRepoImplementaion.swift in Sources */,
 				74FB81D82850FB3700167564 /* RegisterViewModel.swift in Sources */,
 				74FB81782850FADD00167564 /* Coordinator.swift in Sources */,
+				743CA7C42856B347008096DC /* CustomCollectionViewLayOut.swift in Sources */,
 				74FB81D52850FB3700167564 /* RegisterUseCase.swift in Sources */,
 				74FB817F2850FADD00167564 /* UIView+EXT.swift in Sources */,
 				74FB817B2850FADD00167564 /* SceneDelegate.swift in Sources */,
@@ -886,7 +950,6 @@
 				INFOPLIST_FILE = "WriteX-Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -913,7 +976,6 @@
 				INFOPLIST_FILE = "WriteX-Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -953,6 +1015,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		74FB81582850F84100167564 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -980,6 +1050,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		740D9F3E2857686B003FB7F7 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
 		74FB81592850F84100167564 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 74FB81582850F84100167564 /* XCRemoteSwiftPackageReference "RxSwift" */;
