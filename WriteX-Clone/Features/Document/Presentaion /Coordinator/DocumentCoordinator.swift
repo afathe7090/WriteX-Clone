@@ -32,6 +32,12 @@ class DocumentCoordinator: BaseCoordinatorImplementation {
     }
     
     
+    func pressentToAddNote(note: Note? ){
+        let addNoteCoordinator = AddNoteCoordinator(parentNavigationController: parentNavigationController)
+        addNoteCoordinator.startCoordinatorWithNote(note: note)
+    }
+    
+    
     func pushToViewController(){
         let viewController = UIViewController()
         viewController.view.backgroundColor = .blue

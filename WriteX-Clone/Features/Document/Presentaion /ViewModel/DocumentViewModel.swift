@@ -48,6 +48,8 @@ class DocumentViewModel {
 
     }
         
+    
+    
     func returnNotesAfterInAllCaseOFFillters() -> Observable<[Note]>{
         return useCase.returnNotesAfterInAllCaseOFFillters(notesPublisher , search: searchBarText)
     }
@@ -56,14 +58,9 @@ class DocumentViewModel {
     
     func didSelectItemAtIndexAndNotes( note: Note , indexPath: IndexPath){
         
-        if ( indexPath.row == 0         &&       searchBarText.value.isEmpty ){
-            
-            print("start adding")
-            // start to add notes with present from coordinator
-        }else{
-            // edit notes
-            print(note)
-        }
+        let stateOFSelect = ( indexPath.row == 0  &&  searchBarText.value.isEmpty )
+        coordinator?.pressentToAddNote(note: stateOFSelect ?  nil:note)
+        
     }
     
     

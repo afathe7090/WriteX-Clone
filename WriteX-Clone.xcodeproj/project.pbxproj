@@ -18,6 +18,13 @@
 		743CA7C42856B347008096DC /* CustomCollectionViewLayOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */; };
 		743CA7C92856B3D2008096DC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C72856B3D2008096DC /* HelperFunctions.swift */; };
 		743CA7CA2856B3D2008096DC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C82856B3D2008096DC /* Constant.swift */; };
+		74DE4D88285D618300CC3128 /* AddNotesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D87285D618300CC3128 /* AddNotesRepo.swift */; };
+		74DE4D8D285D61CC00CC3128 /* AddNotesRepoImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D8C285D61CC00CC3128 /* AddNotesRepoImplementation.swift */; };
+		74DE4D8F285D61E800CC3128 /* AddNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D8E285D61E800CC3128 /* AddNoteUseCase.swift */; };
+		74DE4D94285D626600CC3128 /* AddNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D93285D626600CC3128 /* AddNoteCoordinator.swift */; };
+		74DE4D96285D629A00CC3128 /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D95285D629A00CC3128 /* AddNoteViewModel.swift */; };
+		74DE4D99285D62BB00CC3128 /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D97285D62BB00CC3128 /* AddNoteVC.swift */; };
+		74DE4D9A285D62BB00CC3128 /* AddNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74DE4D98285D62BB00CC3128 /* AddNoteVC.xib */; };
 		74FB815A2850F84100167564 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB81592850F84100167564 /* RxCocoa */; };
 		74FB815C2850F84100167564 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB815B2850F84100167564 /* RxSwift */; };
 		74FB815F2850F85400167564 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB815E2850F85400167564 /* ProgressHUD */; };
@@ -79,6 +86,13 @@
 		743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayOut.swift; sourceTree = "<group>"; };
 		743CA7C72856B3D2008096DC /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		743CA7C82856B3D2008096DC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		74DE4D87285D618300CC3128 /* AddNotesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesRepo.swift; sourceTree = "<group>"; };
+		74DE4D8C285D61CC00CC3128 /* AddNotesRepoImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesRepoImplementation.swift; sourceTree = "<group>"; };
+		74DE4D8E285D61E800CC3128 /* AddNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteUseCase.swift; sourceTree = "<group>"; };
+		74DE4D93285D626600CC3128 /* AddNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCoordinator.swift; sourceTree = "<group>"; };
+		74DE4D95285D629A00CC3128 /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		74DE4D97285D62BB00CC3128 /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
+		74DE4D98285D62BB00CC3128 /* AddNoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNoteVC.xib; sourceTree = "<group>"; };
 		74FB81412850F6ED00167564 /* WriteX-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WriteX-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FB81522850F6EF00167564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FB81682850FADC00167564 /* FirebaseAuthImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthImplementation.swift; sourceTree = "<group>"; };
@@ -172,6 +186,100 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		74DE4D82285D614800CC3128 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D85285D616900CC3128 /* Data */,
+				74DE4D84285D615800CC3128 /* Presentaion */,
+				74DE4D83285D615400CC3128 /* Domain */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		74DE4D83285D615400CC3128 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D86285D617300CC3128 /* repo */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		74DE4D84285D615800CC3128 /* Presentaion */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D92285D622E00CC3128 /* Coordinator */,
+				74DE4D91285D622900CC3128 /* ViewModel */,
+				74DE4D90285D622500CC3128 /* View */,
+			);
+			path = Presentaion;
+			sourceTree = "<group>";
+		};
+		74DE4D85285D616900CC3128 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D8B285D61AC00CC3128 /* UseCase */,
+				74DE4D8A285D619600CC3128 /* Repo */,
+				74DE4D89285D619000CC3128 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		74DE4D86285D617300CC3128 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D87285D618300CC3128 /* AddNotesRepo.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		74DE4D89285D619000CC3128 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74DE4D8A285D619600CC3128 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D8C285D61CC00CC3128 /* AddNotesRepoImplementation.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		74DE4D8B285D61AC00CC3128 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D8E285D61E800CC3128 /* AddNoteUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		74DE4D90285D622500CC3128 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D97285D62BB00CC3128 /* AddNoteVC.swift */,
+				74DE4D98285D62BB00CC3128 /* AddNoteVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74DE4D91285D622900CC3128 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D95285D629A00CC3128 /* AddNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74DE4D92285D622E00CC3128 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74DE4D93285D626600CC3128 /* AddNoteCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		74FB81382850F6ED00167564 = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +305,7 @@
 				74FB816A2850FADD00167564 /* Coordinator */,
 				74FB81672850FADC00167564 /* FirebaseManager */,
 				74FB81702850FADD00167564 /* Extension */,
-				74FB81882850FB3600167564 /* Scenes */,
+				74FB81882850FB3600167564 /* Features */,
 				74FB81802850FAE200167564 /* Resources */,
 				74FB81522850F6EF00167564 /* Info.plist */,
 			);
@@ -261,15 +369,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		74FB81882850FB3600167564 /* Scenes */ = {
+		74FB81882850FB3600167564 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				74DE4D82285D614800CC3128 /* AddNote */,
 				74FB81892850FB3600167564 /* Auth */,
 				74FB81AE2850FB3600167564 /* Document */,
 				74FB81C02850FB3600167564 /* Setting */,
 				74FB81D12850FB3600167564 /* Base */,
 			);
-			path = Scenes;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		74FB81892850FB3600167564 /* Auth */ = {
@@ -756,6 +865,7 @@
 				743CA7C02856B2DD008096DC /* AddCell.xib in Resources */,
 				74FB81EE2850FB3800167564 /* SettingsViewController.xib in Resources */,
 				74FB81E52850FB3800167564 /* DocumentViewController.xib in Resources */,
+				74DE4D9A285D62BB00CC3128 /* AddNoteVC.xib in Resources */,
 				743CA7C12856B2DD008096DC /* NotesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,16 +889,20 @@
 				74FB81E82850FB3800167564 /* DocumentUseCase.swift in Sources */,
 				74FB81EB2850FB3800167564 /* SettingsRepoImplementation.swift in Sources */,
 				74FB81E32850FB3800167564 /* DocumentViewModel.swift in Sources */,
+				74DE4D96285D629A00CC3128 /* AddNoteViewModel.swift in Sources */,
 				74FB81792850FADD00167564 /* AppCoordinator.swift in Sources */,
 				74FB81E42850FB3800167564 /* DocumentCoordinator.swift in Sources */,
 				74FB81762850FADD00167564 /* FirebaseAuthImplementation.swift in Sources */,
 				74FB81EA2850FB3800167564 /* SettingsUseCase.swift in Sources */,
 				74FB81F02850FB3800167564 /* BaseTabBarController.swift in Sources */,
+				74DE4D88285D618300CC3128 /* AddNotesRepo.swift in Sources */,
 				74FB817E2850FADD00167564 /* TextField+EXT.swift in Sources */,
+				74DE4D99285D62BB00CC3128 /* AddNoteVC.swift in Sources */,
 				743CA7C22856B2DD008096DC /* NotesCell.swift in Sources */,
 				74FB81E62850FB3800167564 /* DocumentViewController.swift in Sources */,
 				74FB81DE2850FB3800167564 /* LoginRepo.swift in Sources */,
 				74FB81DF2850FB3800167564 /* LoginViewModel.swift in Sources */,
+				74DE4D8D285D61CC00CC3128 /* AddNotesRepoImplementation.swift in Sources */,
 				74FB81E02850FB3800167564 /* LoginCoordinator.swift in Sources */,
 				74FB81E72850FB3800167564 /* DocumentRepo.swift in Sources */,
 				74FB817C2850FADD00167564 /* UIButton+Ext.swift in Sources */,
@@ -800,12 +914,14 @@
 				740298A0285CF7420025AD47 /* DataSourceHandelar.swift in Sources */,
 				74FB817D2850FADD00167564 /* UIColor+EXT.swift in Sources */,
 				74FB81DA2850FB3800167564 /* RegisterVC.swift in Sources */,
+				74DE4D8F285D61E800CC3128 /* AddNoteUseCase.swift in Sources */,
 				743CA7CA2856B3D2008096DC /* Constant.swift in Sources */,
 				743CA7BF2856B2DD008096DC /* AddCell.swift in Sources */,
 				74FB81E92850FB3800167564 /* DocumentRepoImplementaion.swift in Sources */,
 				74FB81D82850FB3700167564 /* RegisterViewModel.swift in Sources */,
 				74FB81782850FADD00167564 /* Coordinator.swift in Sources */,
 				743CA7C42856B347008096DC /* CustomCollectionViewLayOut.swift in Sources */,
+				74DE4D94285D626600CC3128 /* AddNoteCoordinator.swift in Sources */,
 				74FB81D52850FB3700167564 /* RegisterUseCase.swift in Sources */,
 				74FB817F2850FADD00167564 /* UIView+EXT.swift in Sources */,
 				74FB817B2850FADD00167564 /* SceneDelegate.swift in Sources */,
