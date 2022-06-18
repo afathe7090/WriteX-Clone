@@ -50,7 +50,7 @@ class DocumentViewController: UIViewController {
         // DataSource COllection View
         configureDataSourceDataFromNotes()
         configureCollectionViewDataSource()
-        
+        didSelectItemByIndexAndNotesForCollectionView()
         
         // Fetch Data
         loadDataOFNotes()
@@ -73,7 +73,6 @@ class DocumentViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
     
     
     fileprivate func setUpSearchController(){
@@ -107,20 +106,23 @@ class DocumentViewController: UIViewController {
     }
     
     
-    
+    fileprivate func configureDataSourceDataFromNotes(){
+        viewModel.returnNotesAfterInAllCaseOFFillters()
+            .map({[SectionDataSources(header: "", items: $0)]})
+            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
+            .disposed(by: bag)
+    }
     
     
     //MARK: - DataSource of collectionView
     fileprivate func configureCollectionViewDataSource(){
-        viewModel.dataSource.configureCell = {(dataSource , collectionView, indexPath , note ) -> UICollectionViewCell in
+        viewModel.dataSource.configureCell = {[weak self] (dataSource , collectionView, indexPath , note ) -> UICollectionViewCell in
+            guard let self = self else { return UICollectionViewCell() }
+            
             if (indexPath.row == 0 && self.viewModel.searchBarText.value.isEmpty) {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddCell.cellID,
-                                                              for: indexPath) as! AddCell
-                return cell
-                
+                return collectionView.configureReusableCell(identifier: AddCell.cellID, indexPath: indexPath) as! AddCell
             }else {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NotesCell.cellID,
-                                                              for: indexPath) as! NotesCell
+                let cell = collectionView.configureReusableCell(identifier: NotesCell.cellID, indexPath: indexPath) as! NotesCell
                 cell.configureCellData(note: note)
                 return cell
             }
@@ -128,14 +130,18 @@ class DocumentViewController: UIViewController {
     }
     
     
-    fileprivate func configureDataSourceDataFromNotes(){
-        loadDataOFNotes()
+    fileprivate func didSelectItemByIndexAndNotesForCollectionView(){
+
+        Observable.zip(collectionView.rx.modelSelected(Note.self), collectionView.rx.itemSelected)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (note, indexPath) in
+                guard let self = self else { return }
+                self.viewModel.didSelectItemAtIndexAndNotes(note: note, indexPath: indexPath)
+        }).disposed(by: bag)
         
-        viewModel.returnNotesAfterInAllCaseOFFillters()
-            .map({[SectionDataSources(header: "", items: $0)]})
-            .bind(to: collectionView.rx.items(dataSource: viewModel.dataSource))
-            .disposed(by: bag)
     }
+    
+    
     
     //MARK: -  Fetch Data oF Notes
     fileprivate func loadDataOFNotes(){
@@ -143,4 +149,3 @@ class DocumentViewController: UIViewController {
     }
     
 }
-

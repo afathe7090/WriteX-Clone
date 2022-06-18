@@ -21,5 +21,13 @@ extension UICollectionView {
     }
     
     
+    func configureReusableCell(identifier: String, indexPath: IndexPath) -> UICollectionViewCell{
+        let cell = self.dequeueReusableCell(withReuseIdentifier: identifier,
+                                            for: indexPath)
+        return cell
+        
+    }
+    
+    
     
 }
