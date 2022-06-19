@@ -11,6 +11,11 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
+protocol FetchNoteProtocol{
+    func fetchNewNote(note: Note)
+    func updateNote(note: Note)
+}
+
 
 class DocumentViewModel {
     
@@ -18,47 +23,66 @@ class DocumentViewModel {
     //MARK: - Proberties
     private var coordinator: DocumentCoordinator?
     
-    let notesPublisher: PublishRelay<[Note]> = PublishRelay()
-    let searchBarText: BehaviorRelay<String> = BehaviorRelay(value: "")
+    private let useCase: DocumentUseCase        = DocumentUseCase()
     
-    var dataSource = RxCollectionViewSectionedReloadDataSource<SectionDataSources<Note>> { _, _, _, _ in
-        fatalError()
-    }
+    var notesPublisher: PublishRelay<[Note]>    = PublishRelay()
+    let collectedNotes: BehaviorRelay<[Note]>   = BehaviorRelay(value: [])
     
-    let useCase: DocumentUseCase = DocumentUseCase()
+    let searchBarText: BehaviorRelay<String>    = BehaviorRelay(value: "")
+    let selectedNote: BehaviorRelay<Note?>      = BehaviorRelay(value: nil)
+    let isHidden: BehaviorRelay<Bool>           = BehaviorRelay(value: false)
     
     
+    
+    private let bag = DisposeBag()
+    
+    
+    //MARK: - Data source
+    var dataSource = RxCollectionViewSectionedReloadDataSource<SectionDataSources<Note>> { _, _, _, _ in fatalError()}
     
     
     //MARK: -  Init
-    init(coordinator: DocumentCoordinator = DocumentCoordinator()){
+    init(coordinator: DocumentCoordinator = DocumentCoordinator(),
+         isHidden: Bool = false){
         self.coordinator = coordinator
+        self.isHidden.accept(isHidden)
     }
     
     
     //MARK: - Helper FUnctions
     func noteDemoData(){
+        
         let notes: [Note] = [.init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
                              .init(title: "ahme ", discription: "Nre kjl ", date: "",isHidden: false),
                              .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
                              .init(title: "asfd ", discription: "Nre kjl ", date: "",isHidden: false),
                              .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false)
         ]
-        self.notesPublisher.accept(notes)
+        
+    
+        self.collectedNotes.accept(notes)
 
     }
-        
     
     
     func returnNotesAfterInAllCaseOFFillters() -> Observable<[Note]>{
-        return useCase.returnNotesAfterInAllCaseOFFillters(notesPublisher , search: searchBarText)
+        return useCase.returnNotesAfterInAllCaseOFFillters(notesPublisher.asObservable()
+                                                           , search: searchBarText.asObservable()
+                                                           , isHidden: isHidden.value)
+    }
+    
+    
+    func updateOFNotesByCollectionObservable(){
+        collectedNotes.asObservable().subscribe(onNext: { notes in
+            self.notesPublisher.accept(notes)
+        }).disposed(by: bag)
     }
     
     
     
     func didSelectItemAtIndexAndNotes( note: Note , indexPath: IndexPath){
-        
         let stateOFSelect = ( indexPath.row == 0  &&  searchBarText.value.isEmpty )
+        selectedNote.accept(stateOFSelect ? nil:note)
         coordinator?.pressentToAddNote(note: stateOFSelect ?  nil:note)
         
     }
@@ -66,3 +90,23 @@ class DocumentViewModel {
     
 }
 
+extension DocumentViewModel: FetchNoteProtocol {
+    
+    func fetchNewNote(note: Note) {
+        collectedNotes.accept([note] + collectedNotes.value)
+    }
+    
+    
+    func updateNote(note: Note) {
+        if let oldNotes = selectedNote.value {
+            var notesEdit:[Note] = collectedNotes.value
+            notesEdit.remove(element: oldNotes)
+            notesEdit.insert(note, at: 0 )
+            collectedNotes.accept(notesEdit)
+        }
+
+    }
+    
+    
+    
+}

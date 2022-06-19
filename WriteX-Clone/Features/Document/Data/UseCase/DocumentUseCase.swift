@@ -19,8 +19,10 @@ class DocumentUseCase{
         self.repo = repo
     }
     
-    func returnNotesAfterInAllCaseOFFillters(_ notes: PublishRelay<[Note]> , search: BehaviorRelay<String>) -> Observable<[Note]>{
-        return repo.returnNotesAfterInAllCaseOFFillters(notes, search: search)
+    func returnNotesAfterInAllCaseOFFillters(_ notes: Observable<[Note]>
+                                             , search: Observable<String>,
+                                             isHidden: Bool) -> Observable<[Note]>{
+        return repo.returnNotesAfterInAllCaseOFFillters(notes, search: search, isHidden: isHidden)
     }
     
 }

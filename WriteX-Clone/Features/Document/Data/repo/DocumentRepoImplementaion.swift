@@ -11,10 +11,13 @@ import RxSwift
 
 class DocumentRepoImplementaion: DocumentRepo {
     
-    func returnNotesAfterInAllCaseOFFillters(_ notes: PublishRelay<[Note]> , search: BehaviorRelay<String>) -> Observable<[Note]> {
+    func returnNotesAfterInAllCaseOFFillters(_ notes: Observable<[Note]> ,
+                                             search: Observable<String>, isHidden: Bool) -> Observable<[Note]> {
         return Observable.combineLatest(notes, search).map { (notes ,search) ->[Note]  in
-            if search.isEmpty { return notes }
-            return notes.filter({$0.title.lowercased().contains(search.lowercased())})
+            let fakeNotes:[Note] = [Note(title: "", discription: "", date: "")]
+            if search.isEmpty { return (fakeNotes + notes.filter({ $0.isHidden == isHidden })) }
+            return (notes
+                        .filter({$0.title.lowercased().contains(search.lowercased()) && $0.isHidden == isHidden}))
         }
     }
 }

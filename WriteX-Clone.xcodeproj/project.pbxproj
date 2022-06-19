@@ -18,13 +18,16 @@
 		743CA7C42856B347008096DC /* CustomCollectionViewLayOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */; };
 		743CA7C92856B3D2008096DC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C72856B3D2008096DC /* HelperFunctions.swift */; };
 		743CA7CA2856B3D2008096DC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C82856B3D2008096DC /* Constant.swift */; };
+		74DAF093285EC6A000A365EA /* String + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAF091285EC6A000A365EA /* String + EXT.swift */; };
+		74DAF094285EC6A000A365EA /* Array+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAF092285EC6A000A365EA /* Array+EXT.swift */; };
 		74DE4D88285D618300CC3128 /* AddNotesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D87285D618300CC3128 /* AddNotesRepo.swift */; };
 		74DE4D8D285D61CC00CC3128 /* AddNotesRepoImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D8C285D61CC00CC3128 /* AddNotesRepoImplementation.swift */; };
 		74DE4D8F285D61E800CC3128 /* AddNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D8E285D61E800CC3128 /* AddNoteUseCase.swift */; };
 		74DE4D94285D626600CC3128 /* AddNoteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D93285D626600CC3128 /* AddNoteCoordinator.swift */; };
 		74DE4D96285D629A00CC3128 /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D95285D629A00CC3128 /* AddNoteViewModel.swift */; };
-		74DE4D99285D62BB00CC3128 /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D97285D62BB00CC3128 /* AddNoteVC.swift */; };
-		74DE4D9A285D62BB00CC3128 /* AddNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74DE4D98285D62BB00CC3128 /* AddNoteVC.xib */; };
+		74DE4D99285D62BB00CC3128 /* AddNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D97285D62BB00CC3128 /* AddNotesVC.swift */; };
+		74E28A22285E876000F87536 /* AddNotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E28A21285E876000F87536 /* AddNotesVC.xib */; };
+		74E28A26285E8CB400F87536 /* AddNoteCustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28A25285E8CB400F87536 /* AddNoteCustomTextView.swift */; };
 		74FB815A2850F84100167564 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB81592850F84100167564 /* RxCocoa */; };
 		74FB815C2850F84100167564 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB815B2850F84100167564 /* RxSwift */; };
 		74FB815F2850F85400167564 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 74FB815E2850F85400167564 /* ProgressHUD */; };
@@ -86,13 +89,16 @@
 		743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayOut.swift; sourceTree = "<group>"; };
 		743CA7C72856B3D2008096DC /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		743CA7C82856B3D2008096DC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		74DAF091285EC6A000A365EA /* String + EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + EXT.swift"; sourceTree = "<group>"; };
+		74DAF092285EC6A000A365EA /* Array+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+EXT.swift"; sourceTree = "<group>"; };
 		74DE4D87285D618300CC3128 /* AddNotesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesRepo.swift; sourceTree = "<group>"; };
 		74DE4D8C285D61CC00CC3128 /* AddNotesRepoImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesRepoImplementation.swift; sourceTree = "<group>"; };
 		74DE4D8E285D61E800CC3128 /* AddNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteUseCase.swift; sourceTree = "<group>"; };
 		74DE4D93285D626600CC3128 /* AddNoteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCoordinator.swift; sourceTree = "<group>"; };
 		74DE4D95285D629A00CC3128 /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
-		74DE4D97285D62BB00CC3128 /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
-		74DE4D98285D62BB00CC3128 /* AddNoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNoteVC.xib; sourceTree = "<group>"; };
+		74DE4D97285D62BB00CC3128 /* AddNotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesVC.swift; sourceTree = "<group>"; };
+		74E28A21285E876000F87536 /* AddNotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNotesVC.xib; sourceTree = "<group>"; };
+		74E28A25285E8CB400F87536 /* AddNoteCustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCustomTextView.swift; sourceTree = "<group>"; };
 		74FB81412850F6ED00167564 /* WriteX-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WriteX-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FB81522850F6EF00167564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FB81682850FADC00167564 /* FirebaseAuthImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthImplementation.swift; sourceTree = "<group>"; };
@@ -186,6 +192,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		74DAF090285EC6A000A365EA /* DataType */ = {
+			isa = PBXGroup;
+			children = (
+				74DAF091285EC6A000A365EA /* String + EXT.swift */,
+				74DAF092285EC6A000A365EA /* Array+EXT.swift */,
+			);
+			path = DataType;
+			sourceTree = "<group>";
+		};
 		74DE4D82285D614800CC3128 /* AddNote */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,8 +273,9 @@
 		74DE4D90285D622500CC3128 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74DE4D97285D62BB00CC3128 /* AddNoteVC.swift */,
-				74DE4D98285D62BB00CC3128 /* AddNoteVC.xib */,
+				74E28A21285E876000F87536 /* AddNotesVC.xib */,
+				74DE4D97285D62BB00CC3128 /* AddNotesVC.swift */,
+				74E28A25285E8CB400F87536 /* AddNoteCustomTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +358,7 @@
 		74FB81702850FADD00167564 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				74DAF090285EC6A000A365EA /* DataType */,
 				74FB81712850FADD00167564 /* UI+EXT */,
 			);
 			path = Extension;
@@ -857,6 +874,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E28A22285E876000F87536 /* AddNotesVC.xib in Resources */,
 				74FB81E22850FB3800167564 /* LoginVC.xib in Resources */,
 				74FB81872850FAE200167564 /* LaunchScreen.storyboard in Resources */,
 				74FB81DB2850FB3800167564 /* RegisterVC.xib in Resources */,
@@ -865,7 +883,6 @@
 				743CA7C02856B2DD008096DC /* AddCell.xib in Resources */,
 				74FB81EE2850FB3800167564 /* SettingsViewController.xib in Resources */,
 				74FB81E52850FB3800167564 /* DocumentViewController.xib in Resources */,
-				74DE4D9A285D62BB00CC3128 /* AddNoteVC.xib in Resources */,
 				743CA7C12856B2DD008096DC /* NotesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -896,10 +913,13 @@
 				74FB81EA2850FB3800167564 /* SettingsUseCase.swift in Sources */,
 				74FB81F02850FB3800167564 /* BaseTabBarController.swift in Sources */,
 				74DE4D88285D618300CC3128 /* AddNotesRepo.swift in Sources */,
+				74DAF093285EC6A000A365EA /* String + EXT.swift in Sources */,
 				74FB817E2850FADD00167564 /* TextField+EXT.swift in Sources */,
-				74DE4D99285D62BB00CC3128 /* AddNoteVC.swift in Sources */,
+				74E28A26285E8CB400F87536 /* AddNoteCustomTextView.swift in Sources */,
+				74DE4D99285D62BB00CC3128 /* AddNotesVC.swift in Sources */,
 				743CA7C22856B2DD008096DC /* NotesCell.swift in Sources */,
 				74FB81E62850FB3800167564 /* DocumentViewController.swift in Sources */,
+				74DAF094285EC6A000A365EA /* Array+EXT.swift in Sources */,
 				74FB81DE2850FB3800167564 /* LoginRepo.swift in Sources */,
 				74FB81DF2850FB3800167564 /* LoginViewModel.swift in Sources */,
 				74DE4D8D285D61CC00CC3128 /* AddNotesRepoImplementation.swift in Sources */,

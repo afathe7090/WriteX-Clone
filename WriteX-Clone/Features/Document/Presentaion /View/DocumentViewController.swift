@@ -131,7 +131,6 @@ class DocumentViewController: UIViewController {
     
     
     fileprivate func didSelectItemByIndexAndNotesForCollectionView(){
-
         Observable.zip(collectionView.rx.modelSelected(Note.self), collectionView.rx.itemSelected)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: {[weak self] (note, indexPath) in
@@ -145,6 +144,7 @@ class DocumentViewController: UIViewController {
     
     //MARK: -  Fetch Data oF Notes
     fileprivate func loadDataOFNotes(){
+        viewModel.updateOFNotesByCollectionObservable()
         viewModel.noteDemoData()
     }
     

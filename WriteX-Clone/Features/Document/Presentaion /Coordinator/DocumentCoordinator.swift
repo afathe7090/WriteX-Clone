@@ -12,6 +12,7 @@ class DocumentCoordinator: BaseCoordinatorImplementation {
     
     
     private var parentNavigationController: UINavigationController
+    private var documentViewModel: DocumentViewModel!
     
     init(parentNavigatioController: UINavigationController = UINavigationController()) {
         self.parentNavigationController = parentNavigatioController
@@ -21,7 +22,7 @@ class DocumentCoordinator: BaseCoordinatorImplementation {
     override func startCoordinatorWithNavigationController() -> UINavigationController {
         parentNavigationController.navigationBar.isHidden = true
         
-        let documentViewModel = DocumentViewModel(coordinator: self)
+        documentViewModel = DocumentViewModel(coordinator: self)
         let documentVC = DocumentViewController(viewModel: documentViewModel)
         
         documentVC.title = "Document"
@@ -34,13 +35,7 @@ class DocumentCoordinator: BaseCoordinatorImplementation {
     
     func pressentToAddNote(note: Note? ){
         let addNoteCoordinator = AddNoteCoordinator(parentNavigationController: parentNavigationController)
-        addNoteCoordinator.startCoordinatorWithNote(note: note)
+        addNoteCoordinator.startCoordinatorWithNote(note: note, fetchProtocol: documentViewModel)
     }
     
-    
-    func pushToViewController(){
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .blue
-        self.parentNavigationController.pushViewController(viewController, animated: true)
-    }
 }

@@ -21,12 +21,17 @@ class AddNoteCoordinator: BaseCoordinatorImplementation {
     override func startCoordinator() {}
     
     
-    func startCoordinatorWithNote(note: Note?){
-        let viewModel = AddNoteViewModel(coordinator: self
-                                         ,note: note)
-        let addNoteVC = AddNoteVC(viewModel: viewModel)
-        parentNavigationController.present(addNoteVC, animated: true, completion: nil)
+    func startCoordinatorWithNote(note: Note?, fetchProtocol: FetchNoteProtocol){
+        let viewModel = AddNoteViewModel(coordinator: self,note: note, delegate: fetchProtocol)
+        let addNoteVC = AddNotesVC(viewModel: viewModel)
+        let navigationOfAddNoteVC = UINavigationController(rootViewController: addNoteVC)
+        parentNavigationController.present(navigationOfAddNoteVC, animated: true, completion: nil)
     }
     
+    
+    func didFinishView(){
+        didChildCoordinator(self, completion: { _ in })
+        parentNavigationController.dismiss(animated: true, completion: nil)
+    }
     
 }

@@ -10,5 +10,5 @@ import RxSwift
 import RxCocoa
 
 protocol DocumentRepo  {
-    func returnNotesAfterInAllCaseOFFillters(_ notes: PublishRelay<[Note]> , search: BehaviorRelay<String>) -> Observable<[Note]>
+    func returnNotesAfterInAllCaseOFFillters(_ notes: Observable<[Note]> , search: Observable<String>, isHidden: Bool) -> Observable<[Note]>
 }
