@@ -13,9 +13,11 @@ class AddNoteUseCase {
     
     private let repo: AddNotesRepo
     
+    
     init(repo: AddNotesRepo = AddNotesRepoImplementation()){
         self.repo = repo
     }
+    
     
     
     

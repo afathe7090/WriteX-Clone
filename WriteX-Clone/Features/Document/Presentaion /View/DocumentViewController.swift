@@ -144,8 +144,9 @@ class DocumentViewController: UIViewController {
     
     //MARK: -  Fetch Data oF Notes
     fileprivate func loadDataOFNotes(){
-        viewModel.updateOFNotesByCollectionObservable()
         viewModel.noteDemoData()
+        viewModel.updateOFNotesByCollectionObservable()
+        
     }
     
 }

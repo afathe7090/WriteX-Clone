@@ -43,7 +43,7 @@ class DocumentViewModel {
     
     //MARK: -  Init
     init(coordinator: DocumentCoordinator = DocumentCoordinator(),
-         isHidden: Bool = false){
+         isHidden: Bool = true){
         self.coordinator = coordinator
         self.isHidden.accept(isHidden)
     }
@@ -52,15 +52,11 @@ class DocumentViewModel {
     //MARK: - Helper FUnctions
     func noteDemoData(){
         
-        let notes: [Note] = [.init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
-                             .init(title: "ahme ", discription: "Nre kjl ", date: "",isHidden: false),
-                             .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false),
-                             .init(title: "asfd ", discription: "Nre kjl ", date: "",isHidden: false),
-                             .init(title: "Welcome ", discription: "Nre kjl ", date: "",isHidden: false)
-        ]
-        
-    
-        self.collectedNotes.accept(notes)
+        if let notes = useCase.readNotesFromRealm() {
+            self.collectedNotes.accept(notes)
+        }else {
+            print("No Data found in Realm ......")
+        }
 
     }
     
@@ -73,8 +69,10 @@ class DocumentViewModel {
     
     
     func updateOFNotesByCollectionObservable(){
-        collectedNotes.asObservable().subscribe(onNext: { notes in
+        collectedNotes.asObservable().subscribe(onNext: {[weak self] notes in
+            guard let self = self else { return }
             self.notesPublisher.accept(notes)
+            self.useCase.writeNoteTORealm(notes)
         }).disposed(by: bag)
     }
     
@@ -95,8 +93,7 @@ extension DocumentViewModel: FetchNoteProtocol {
     func fetchNewNote(note: Note) {
         collectedNotes.accept([note] + collectedNotes.value)
     }
-    
-    
+
     func updateNote(note: Note) {
         if let oldNotes = selectedNote.value {
             var notesEdit:[Note] = collectedNotes.value

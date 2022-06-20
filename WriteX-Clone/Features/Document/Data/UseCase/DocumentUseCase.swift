@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RealmSwift
 
 class DocumentUseCase{
     
@@ -24,5 +25,14 @@ class DocumentUseCase{
                                              isHidden: Bool) -> Observable<[Note]>{
         return repo.returnNotesAfterInAllCaseOFFillters(notes, search: search, isHidden: isHidden)
     }
+    
+    func writeNoteTORealm(_ notes: [Note]){
+        repo.writeNoteTORealm(notes)
+    }
+    
+    func readNotesFromRealm()-> [Note]?{
+        repo.readNotesFromRealm()
+    }
+    
     
 }

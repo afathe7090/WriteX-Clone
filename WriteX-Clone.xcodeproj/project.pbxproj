@@ -18,6 +18,9 @@
 		743CA7C42856B347008096DC /* CustomCollectionViewLayOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */; };
 		743CA7C92856B3D2008096DC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C72856B3D2008096DC /* HelperFunctions.swift */; };
 		743CA7CA2856B3D2008096DC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C82856B3D2008096DC /* Constant.swift */; };
+		74723FF02860057B0043BCAA /* RealmDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74723FEF2860057B0043BCAA /* RealmDataBaseManager.swift */; };
+		74723FF3286006840043BCAA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 74723FF2286006840043BCAA /* Realm */; };
+		74723FF5286006840043BCAA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74723FF4286006840043BCAA /* RealmSwift */; };
 		74DAF093285EC6A000A365EA /* String + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAF091285EC6A000A365EA /* String + EXT.swift */; };
 		74DAF094285EC6A000A365EA /* Array+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAF092285EC6A000A365EA /* Array+EXT.swift */; };
 		74DE4D88285D618300CC3128 /* AddNotesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE4D87285D618300CC3128 /* AddNotesRepo.swift */; };
@@ -89,6 +92,7 @@
 		743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayOut.swift; sourceTree = "<group>"; };
 		743CA7C72856B3D2008096DC /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		743CA7C82856B3D2008096DC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		74723FEF2860057B0043BCAA /* RealmDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBaseManager.swift; sourceTree = "<group>"; };
 		74DAF091285EC6A000A365EA /* String + EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + EXT.swift"; sourceTree = "<group>"; };
 		74DAF092285EC6A000A365EA /* Array+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+EXT.swift"; sourceTree = "<group>"; };
 		74DE4D87285D618300CC3128 /* AddNotesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesRepo.swift; sourceTree = "<group>"; };
@@ -153,9 +157,11 @@
 				74FB81642850FA6C00167564 /* FirebaseDatabase in Frameworks */,
 				74FB815F2850F85400167564 /* ProgressHUD in Frameworks */,
 				74FB815C2850F84100167564 /* RxSwift in Frameworks */,
+				74723FF5286006840043BCAA /* RealmSwift in Frameworks */,
 				74FB815A2850F84100167564 /* RxCocoa in Frameworks */,
 				740D9F3F2857686B003FB7F7 /* RxDataSources in Frameworks */,
 				74FB81622850FA6C00167564 /* FirebaseAuth in Frameworks */,
+				74723FF3286006840043BCAA /* Realm in Frameworks */,
 				74FB81662850FA6C00167564 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +198,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		74723FEE2860051B0043BCAA /* LocalDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				74723FEF2860057B0043BCAA /* RealmDataBaseManager.swift */,
+			);
+			path = LocalDataManager;
+			sourceTree = "<group>";
+		};
 		74DAF090285EC6A000A365EA /* DataType */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,9 +218,9 @@
 		74DE4D82285D614800CC3128 /* AddNote */ = {
 			isa = PBXGroup;
 			children = (
+				74DE4D83285D615400CC3128 /* Domain */,
 				74DE4D85285D616900CC3128 /* Data */,
 				74DE4D84285D615800CC3128 /* Presentaion */,
-				74DE4D83285D615400CC3128 /* Domain */,
 			);
 			path = AddNote;
 			sourceTree = "<group>";
@@ -315,6 +329,7 @@
 		74FB81432850F6ED00167564 /* WriteX-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				74723FEE2860051B0043BCAA /* LocalDataManager */,
 				743CA7C62856B3C2008096DC /* Helper */,
 				743CA7C52856B34B008096DC /* CustomLayout */,
 				74FB816C2850FADD00167564 /* Core */,
@@ -389,11 +404,11 @@
 		74FB81882850FB3600167564 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				74DE4D82285D614800CC3128 /* AddNote */,
 				74FB81892850FB3600167564 /* Auth */,
-				74FB81AE2850FB3600167564 /* Document */,
-				74FB81C02850FB3600167564 /* Setting */,
 				74FB81D12850FB3600167564 /* Base */,
+				74FB81AE2850FB3600167564 /* Document */,
+				74DE4D82285D614800CC3128 /* AddNote */,
+				74FB81C02850FB3600167564 /* Setting */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -825,6 +840,8 @@
 				74FB81632850FA6C00167564 /* FirebaseDatabase */,
 				74FB81652850FA6C00167564 /* FirebaseStorage */,
 				740D9F3E2857686B003FB7F7 /* RxDataSources */,
+				74723FF2286006840043BCAA /* Realm */,
+				74723FF4286006840043BCAA /* RealmSwift */,
 			);
 			productName = "WriteX-Clone";
 			productReference = 74FB81412850F6ED00167564 /* WriteX-Clone.app */;
@@ -859,6 +876,7 @@
 				74FB815D2850F85400167564 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				74FB81602850FA6C00167564 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				74723FF1286006830043BCAA /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 74FB81422850F6ED00167564 /* Products */;
 			projectDirPath = "";
@@ -903,6 +921,7 @@
 				74FB81F12850FB3800167564 /* BaseTabBarCoordinstor.swift in Sources */,
 				74FB81EC2850FB3800167564 /* SettingsRepo.swift in Sources */,
 				74FB81DC2850FB3800167564 /* LoginUseCase.swift in Sources */,
+				74723FF02860057B0043BCAA /* RealmDataBaseManager.swift in Sources */,
 				74FB81E82850FB3800167564 /* DocumentUseCase.swift in Sources */,
 				74FB81EB2850FB3800167564 /* SettingsRepoImplementation.swift in Sources */,
 				74FB81E32850FB3800167564 /* DocumentViewModel.swift in Sources */,
@@ -1163,6 +1182,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		74723FF1286006830043BCAA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		74FB81582850F84100167564 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -1194,6 +1221,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
+		};
+		74723FF2286006840043BCAA /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74723FF1286006830043BCAA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		74723FF4286006840043BCAA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74723FF1286006830043BCAA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		74FB81592850F84100167564 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;

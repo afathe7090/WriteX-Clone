@@ -60,6 +60,7 @@ class AddNotesVC: UIViewController {
         viewModel.noteBehavior.asObservable().subscribe(onNext: {[weak self] note in
             guard let self = self else { return }
             self.title = (note == nil) ? "Add Note":"Edit Note"
+            self.titleTextField.text = note?.title
         }).disposed(by: bag)
     }
     

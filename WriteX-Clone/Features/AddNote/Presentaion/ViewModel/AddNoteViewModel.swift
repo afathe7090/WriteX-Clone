@@ -31,7 +31,7 @@ class AddNoteViewModel {
     
     func startSavingNote(){
         let note = Note(title: titleTextObservable.value,
-                        discription: discribtionTextObservable.value, date: "\(Date())", isHidden: false)
+                        discription: discribtionTextObservable.value, date: "\(Date())", isHidden: true)
         
         if noteBehavior.value != nil {
             // update notes
