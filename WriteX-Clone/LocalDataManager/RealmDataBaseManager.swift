@@ -12,7 +12,9 @@ import UIKit
 protocol RealmDBManagerProtocol: AnyObject{
     func insert<T: Object>(_ model: T)
     func read<T: Object>(_ model: T.Type ,completion: @escaping([T])-> Void)
+    func readResults<T: Object>(_ model: T.Type ,completion: @escaping(Results<T>)-> Void)
     func readByIndex<T: Object>(_ model: T.Type,at index: Int ,completion: @escaping(T)-> Void)
+    func deletAllByObject<T: Object>(_ model: T.Type)
     func deleteObj<T: Object>(_ model: T)
     func deleteByIndex<T: Object>(_ model: T.Type, at index: Int)
     func deletAll()
@@ -59,6 +61,11 @@ class RealmDBManager: RealmDBManagerProtocol{
         completion(objects.toArray(ofType: T.self))
     }
     
+    func readResults<T: Object>(_ model: T.Type ,completion: @escaping(Results<T>)-> Void){
+        let objects = realm.objects(model.self)
+        completion(objects)
+    }
+    
     
     /// Description
     /// - Read data by index
@@ -71,6 +78,19 @@ class RealmDBManager: RealmDBManagerProtocol{
     }
     
     
+    /// Description
+    /// - Delete all data in Realm For Just Model
+    func deletAllByObject<T: Object>(_ model: T.Type){
+        do{
+            try realm.write({
+                self.readResults(T.self) {[weak self] results in
+                    guard let self = self else{ return }
+                    self.realm.delete(results) }
+            })
+        }catch {
+            print(error.localizedDescription)
+        }
+    }
     
     /// Description
     /// - Delete all data in Realm

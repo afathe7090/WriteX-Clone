@@ -31,7 +31,7 @@ class DocumentRepoImplementaion: DocumentRepo {
     
     func writeNoteTORealm(_ notes: [Note]){
         
-        realm.deletAll()
+        realm.deletAllByObject(RealmNotes.self)
         notes.forEach { note in
             let noteRelam = RealmNotes()
             noteRelam.title = note.title
