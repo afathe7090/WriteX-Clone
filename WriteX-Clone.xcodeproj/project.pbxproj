@@ -18,6 +18,8 @@
 		743CA7C42856B347008096DC /* CustomCollectionViewLayOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */; };
 		743CA7C92856B3D2008096DC /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C72856B3D2008096DC /* HelperFunctions.swift */; };
 		743CA7CA2856B3D2008096DC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7C82856B3D2008096DC /* Constant.swift */; };
+		745AB8E52860CA1E0026F0F7 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745AB8E42860CA1E0026F0F7 /* SettingsViewModel.swift */; };
+		745AB8E72860D4A80026F0F7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745AB8E62860D4A80026F0F7 /* SettingsViewController.xib */; };
 		74723FF02860057B0043BCAA /* RealmDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74723FEF2860057B0043BCAA /* RealmDataBaseManager.swift */; };
 		74723FF3286006840043BCAA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 74723FF2286006840043BCAA /* Realm */; };
 		74723FF5286006840043BCAA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74723FF4286006840043BCAA /* RealmSwift */; };
@@ -75,7 +77,6 @@
 		74FB81EB2850FB3800167564 /* SettingsRepoImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81C62850FB3600167564 /* SettingsRepoImplementation.swift */; };
 		74FB81EC2850FB3800167564 /* SettingsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81C92850FB3600167564 /* SettingsRepo.swift */; };
 		74FB81ED2850FB3800167564 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81CD2850FB3600167564 /* SettingCoordinator.swift */; };
-		74FB81EE2850FB3800167564 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FB81CF2850FB3600167564 /* SettingsViewController.xib */; };
 		74FB81EF2850FB3800167564 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81D02850FB3600167564 /* SettingsViewController.swift */; };
 		74FB81F02850FB3800167564 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81D32850FB3600167564 /* BaseTabBarController.swift */; };
 		74FB81F12850FB3800167564 /* BaseTabBarCoordinstor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB81D42850FB3600167564 /* BaseTabBarCoordinstor.swift */; };
@@ -92,6 +93,8 @@
 		743CA7C32856B347008096DC /* CustomCollectionViewLayOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayOut.swift; sourceTree = "<group>"; };
 		743CA7C72856B3D2008096DC /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		743CA7C82856B3D2008096DC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		745AB8E42860CA1E0026F0F7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		745AB8E62860D4A80026F0F7 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		74723FEF2860057B0043BCAA /* RealmDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBaseManager.swift; sourceTree = "<group>"; };
 		74DAF091285EC6A000A365EA /* String + EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + EXT.swift"; sourceTree = "<group>"; };
 		74DAF092285EC6A000A365EA /* Array+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+EXT.swift"; sourceTree = "<group>"; };
@@ -143,7 +146,6 @@
 		74FB81C62850FB3600167564 /* SettingsRepoImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepoImplementation.swift; sourceTree = "<group>"; };
 		74FB81C92850FB3600167564 /* SettingsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepo.swift; sourceTree = "<group>"; };
 		74FB81CD2850FB3600167564 /* SettingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
-		74FB81CF2850FB3600167564 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		74FB81D02850FB3600167564 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		74FB81D32850FB3600167564 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		74FB81D42850FB3600167564 /* BaseTabBarCoordinstor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarCoordinstor.swift; sourceTree = "<group>"; };
@@ -768,8 +770,8 @@
 		74FB81CA2850FB3600167564 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				74FB81CB2850FB3600167564 /* ViewModel */,
 				74FB81CC2850FB3600167564 /* Coordinator */,
+				74FB81CB2850FB3600167564 /* ViewModel */,
 				74FB81CE2850FB3600167564 /* View */,
 			);
 			path = Presentation;
@@ -778,6 +780,7 @@
 		74FB81CB2850FB3600167564 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				745AB8E42860CA1E0026F0F7 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -793,7 +796,7 @@
 		74FB81CE2850FB3600167564 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				74FB81CF2850FB3600167564 /* SettingsViewController.xib */,
+				745AB8E62860D4A80026F0F7 /* SettingsViewController.xib */,
 				74FB81D02850FB3600167564 /* SettingsViewController.swift */,
 			);
 			path = View;
@@ -899,9 +902,9 @@
 				74FB81852850FAE200167564 /* Assets.xcassets in Resources */,
 				74FB81862850FAE200167564 /* GoogleService-Info.plist in Resources */,
 				743CA7C02856B2DD008096DC /* AddCell.xib in Resources */,
-				74FB81EE2850FB3800167564 /* SettingsViewController.xib in Resources */,
 				74FB81E52850FB3800167564 /* DocumentViewController.xib in Resources */,
 				743CA7C12856B2DD008096DC /* NotesCell.xib in Resources */,
+				745AB8E72860D4A80026F0F7 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,6 +968,7 @@
 				74FB817F2850FADD00167564 /* UIView+EXT.swift in Sources */,
 				74FB817B2850FADD00167564 /* SceneDelegate.swift in Sources */,
 				74FB81D92850FB3700167564 /* RegisterCoordinator.swift in Sources */,
+				745AB8E52860CA1E0026F0F7 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

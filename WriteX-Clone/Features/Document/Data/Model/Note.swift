@@ -14,6 +14,16 @@ class RealmNotes: Object{
     @objc dynamic var  discription : String = ""
     @objc dynamic var date        : String = ""
     @objc dynamic var isHidden    : Bool = false
+    
+    
+    func setNotes(note: Note){
+        self.title = note.title
+        self.discription = note.discription
+        self.date = note.date
+        self.isHidden = note.isHidden
+    }
+    
+    
 }
 
 struct Note: Codable, Equatable, Hashable{
@@ -30,4 +40,12 @@ struct Note: Codable, Equatable, Hashable{
         self.date = date
         self.isHidden = isHidden
     }
+    
+    init(realmNote: RealmNotes){
+        self.title = realmNote.title
+        self.discription = realmNote.discription
+        self.date = realmNote.date
+        self.isHidden = realmNote.isHidden
+    }
+    
 }

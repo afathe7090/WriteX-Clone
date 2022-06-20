@@ -13,7 +13,7 @@ import RealmSwift
 class DocumentUseCase{
     
     
-    var repo: DocumentRepo
+    private var repo: DocumentRepo
     
     
     init(repo: DocumentRepo = DocumentRepoImplementaion()){

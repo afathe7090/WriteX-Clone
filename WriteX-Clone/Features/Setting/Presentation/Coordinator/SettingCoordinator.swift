@@ -21,7 +21,8 @@ class SettingsCoordinator: BaseCoordinatorImplementation {
     override func startCoordinatorWithNavigationController() -> UINavigationController {
         
         parentNavigationController.navigationBar.isHidden = true
-        let settingsVC = SettingsViewController()
+        let settingViewModel = SettingsViewModel()
+        let settingsVC = SettingsViewController(viewModel: settingViewModel)
         settingsVC.title = "Setting"
         settingsVC.tabBarItem.image = UIImage(systemName: "gear")
         self.navigationController.setViewControllers([settingsVC], animated: true)

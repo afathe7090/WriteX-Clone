@@ -8,6 +8,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import RealmSwift
 
 class DocumentRepoImplementaion: DocumentRepo {
     
@@ -17,8 +18,7 @@ class DocumentRepoImplementaion: DocumentRepo {
     }
 
     
-    
-    
+    //MARK: - setup  notes for datasource and Observe to change all cases
     func returnNotesAfterInAllCaseOFFillters(_ notes: Observable<[Note]> ,
                                              search: Observable<String>, isHidden: Bool) -> Observable<[Note]> {
         return Observable.combineLatest(notes, search).map { (notes ,search) ->[Note]  in
@@ -29,27 +29,24 @@ class DocumentRepoImplementaion: DocumentRepo {
         }
     }
     
+    
+    //MARK: - Write Notes in Database
     func writeNoteTORealm(_ notes: [Note]){
-        
         realm.deletAllByObject(RealmNotes.self)
         notes.forEach { note in
-            let noteRelam = RealmNotes()
-            noteRelam.title = note.title
-            noteRelam.discription = note.discription
-            noteRelam.date  = note.date
-            noteRelam.isHidden = note.isHidden
-            
-            print("the Notes OF Realm \(noteRelam)")
-            realm.insert(noteRelam)
+            let realmNote = RealmNotes()
+            realmNote.setNotes(note: note)
+            print("the Notes OF Realm \(realmNote)")
+            realm.insert(realmNote)
         }
     }
     
+    //MARK: - Read notes from database
     func readNotesFromRealm()-> [Note]?{
         var notes: [Note] = []
         realm.read(RealmNotes.self) { resultNotes in
             resultNotes.forEach { realmNote in
-                let note = Note(title: realmNote.title, discription: realmNote.discription
-                                 , date: realmNote.date, isHidden: realmNote.isHidden)
+                let note = Note(realmNote: realmNote)
                 notes.append(note)
             }
         }
