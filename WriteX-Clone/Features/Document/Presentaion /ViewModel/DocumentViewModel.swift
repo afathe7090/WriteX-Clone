@@ -21,7 +21,7 @@ class DocumentViewModel {
     
     
     //MARK: - Proberties
-    private weak var coordinator: DocumentCoordinator?
+    private var coordinator: DocumentCoordinator?
     
     
     //MARK: - Data Use Case
@@ -52,6 +52,8 @@ class DocumentViewModel {
         self.coordinator = coordinator
         self.isHidden.accept(isHidden)
     }
+    
+    
     
     
     //MARK: - Helper FUnctions
@@ -88,6 +90,11 @@ class DocumentViewModel {
         selectedNote.accept(stateOFSelect ? nil:note)
         coordinator?.pressentToAddNote(note: stateOFSelect ?  nil:note)
         
+    }
+    
+    
+    func didFinish(){
+        coordinator?.finishCoord()
     }
     
     

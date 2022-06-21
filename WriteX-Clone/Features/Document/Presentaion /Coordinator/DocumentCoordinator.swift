@@ -20,7 +20,7 @@ class DocumentCoordinator: BaseCoordinatorImplementation {
     
     
     override func startCoordinatorWithNavigationController() -> UINavigationController {
-        parentNavigationController.navigationBar.isHidden = true
+        parentNavigationController.navigationBar.isHidden = false
         
         documentViewModel = DocumentViewModel(coordinator: self)
         let documentVC = DocumentViewController(viewModel: documentViewModel)
@@ -36,6 +36,19 @@ class DocumentCoordinator: BaseCoordinatorImplementation {
     func pressentToAddNote(note: Note? ){
         let addNoteCoordinator = AddNoteCoordinator(parentNavigationController: parentNavigationController)
         addNoteCoordinator.startCoordinatorWithNote(note: note, fetchProtocol: documentViewModel)
+    }
+    
+    
+    func documentAsHiddenNotes(){
+        documentViewModel = DocumentViewModel(coordinator: self, isHidden: true)
+        let documentVC = DocumentViewController(viewModel: documentViewModel)
+        documentVC.title = "Document"
+//        parentNavigationController.navigationBar.isHidden = false
+        parentNavigationController.pushViewController(documentVC , animated: true)
+    }
+    
+    func finishCoord(){
+        parentNavigationController.navigationBar.isHidden = true
     }
     
 }

@@ -57,13 +57,14 @@ class DocumentViewController: UIViewController {
         
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setNavigatonBar()
+    deinit{
+//        viewModel.didFinish()
     }
-    
-    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        viewModel.didFinish()
+//    }
+//
     
     //MARK: - Helper function
     
@@ -139,7 +140,6 @@ class DocumentViewController: UIViewController {
         }).disposed(by: bag)
         
     }
-    
     
     
     //MARK: -  Fetch Data oF Notes

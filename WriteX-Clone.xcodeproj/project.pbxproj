@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		740298A0285CF7420025AD47 /* DataSourceHandelar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402989F285CF7420025AD47 /* DataSourceHandelar.swift */; };
 		740298A2285D02AB0025AD47 /* UICollectionView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740298A1285D02AB0025AD47 /* UICollectionView+EXT.swift */; };
-		740D9F3F2857686B003FB7F7 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 740D9F3E2857686B003FB7F7 /* RxDataSources */; };
+		743B38A8286215130051724C /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 743B38A7286215130051724C /* RxDataSources */; };
 		743CA7B92856B2B6008096DC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7B82856B2B6008096DC /* Note.swift */; };
 		743CA7BF2856B2DD008096DC /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743CA7BB2856B2DD008096DC /* AddCell.swift */; };
 		743CA7C02856B2DD008096DC /* AddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743CA7BC2856B2DD008096DC /* AddCell.xib */; };
@@ -161,8 +161,8 @@
 				74FB815C2850F84100167564 /* RxSwift in Frameworks */,
 				74723FF5286006840043BCAA /* RealmSwift in Frameworks */,
 				74FB815A2850F84100167564 /* RxCocoa in Frameworks */,
-				740D9F3F2857686B003FB7F7 /* RxDataSources in Frameworks */,
 				74FB81622850FA6C00167564 /* FirebaseAuth in Frameworks */,
+				743B38A8286215130051724C /* RxDataSources in Frameworks */,
 				74723FF3286006840043BCAA /* Realm in Frameworks */,
 				74FB81662850FA6C00167564 /* FirebaseStorage in Frameworks */,
 			);
@@ -331,12 +331,12 @@
 		74FB81432850F6ED00167564 /* WriteX-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				74723FEE2860051B0043BCAA /* LocalDataManager */,
 				743CA7C62856B3C2008096DC /* Helper */,
 				743CA7C52856B34B008096DC /* CustomLayout */,
 				74FB816C2850FADD00167564 /* Core */,
 				74FB816A2850FADD00167564 /* Coordinator */,
 				74FB81672850FADC00167564 /* FirebaseManager */,
+				74723FEE2860051B0043BCAA /* LocalDataManager */,
 				74FB81702850FADD00167564 /* Extension */,
 				74FB81882850FB3600167564 /* Features */,
 				74FB81802850FAE200167564 /* Resources */,
@@ -842,9 +842,9 @@
 				74FB81612850FA6C00167564 /* FirebaseAuth */,
 				74FB81632850FA6C00167564 /* FirebaseDatabase */,
 				74FB81652850FA6C00167564 /* FirebaseStorage */,
-				740D9F3E2857686B003FB7F7 /* RxDataSources */,
 				74723FF2286006840043BCAA /* Realm */,
 				74723FF4286006840043BCAA /* RealmSwift */,
+				743B38A7286215130051724C /* RxDataSources */,
 			);
 			productName = "WriteX-Clone";
 			productReference = 74FB81412850F6ED00167564 /* WriteX-Clone.app */;
@@ -866,7 +866,7 @@
 				};
 			};
 			buildConfigurationList = 74FB813C2850F6ED00167564 /* Build configuration list for PBXProject "WriteX-Clone" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -878,8 +878,8 @@
 				74FB81582850F84100167564 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				74FB815D2850F85400167564 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				74FB81602850FA6C00167564 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				74723FF1286006830043BCAA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				743B38A6286215130051724C /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = 74FB81422850F6ED00167564 /* Products */;
 			projectDirPath = "";
@@ -1178,12 +1178,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+		743B38A6286215130051724C /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		74723FF1286006830043BCAA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
@@ -1198,8 +1198,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
 			};
 		};
 		74FB815D2850F85400167564 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
@@ -1221,9 +1221,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		740D9F3E2857686B003FB7F7 /* RxDataSources */ = {
+		743B38A7286215130051724C /* RxDataSources */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 740D9F3D2857686A003FB7F7 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			package = 743B38A6286215130051724C /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
 		};
 		74723FF2286006840043BCAA /* Realm */ = {

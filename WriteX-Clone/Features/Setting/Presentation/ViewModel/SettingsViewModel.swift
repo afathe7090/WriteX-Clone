@@ -10,30 +10,31 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-enum CaseTableView{
-    case email
-    case hidden
-    case darkModel
-    case logOut
-    
-}
 
 class SettingsViewModel{
     
+    
+    //MARK: - data
     private let useCase = SettingsUseCase()
     private let bag = DisposeBag()
     
-    let caseTableView = Observable.of([1,2,3,4])
+    private var coordinator: SettingsCoordinator?
     
+    //MARK: - Datasource
+    let caseTableView = Observable.of([1,2,3,4])
     var dataSource = RxTableViewSectionedReloadDataSource<SectionDataSources<Int>> {_,_,_,_ in fatalError()}
     
     
     
-    init(){
-        
+    init(coordinator: SettingsCoordinator = SettingsCoordinator()){
+        self.coordinator = coordinator
     }
     
+    func didTabSelectedHiddenCell(){
+        coordinator?.startHiddenCoordinator()
+    }
     
-    
-    
+    func didTablogOutCell(){
+        
+    }
 }

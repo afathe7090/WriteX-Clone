@@ -36,7 +36,6 @@ class DocumentRepoImplementaion: DocumentRepo {
         notes.forEach { note in
             let realmNote = RealmNotes()
             realmNote.setNotes(note: note)
-            print("the Notes OF Realm \(realmNote)")
             realm.insert(realmNote)
         }
     }

@@ -43,6 +43,7 @@ class SettingsViewController: UIViewController {
         configureNavigationController()
         tableViewDataSsource()
         configurationDataSource()
+        didSelectRowAt()
     }
     
     //MARK: - Helper FUnctions
@@ -73,6 +74,17 @@ class SettingsViewController: UIViewController {
             .bind(to: tableView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: bag)
     }
+    
+    
+    fileprivate func didSelectRowAt(){
+        tableView.rx.modelSelected(Int.self).subscribe(onNext: { [weak self] selected in
+            guard let self = self else { return }
+            if (selected == 2) { self.viewModel.didTabSelectedHiddenCell() }
+            if (selected == 4) { self.viewModel.didTablogOutCell() }
+        }).disposed(by: bag)
+    }
+    
+    
 }
 
 

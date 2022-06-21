@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import RxRelay
-
+import RxSwift
+import RxCocoa
 
 class AddNoteViewModel {
     
@@ -31,7 +31,7 @@ class AddNoteViewModel {
     
     func startSavingNote(){
         let note = Note(title: titleTextObservable.value,
-                        discription: discribtionTextObservable.value, date: "\(Date())", isHidden: true)
+                        discription: discribtionTextObservable.value, date: getCurrentData(), isHidden: true)
         
         if noteBehavior.value != nil {
             // update notes
